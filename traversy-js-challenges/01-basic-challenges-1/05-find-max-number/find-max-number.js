@@ -1,9 +1,7 @@
 function findMaxNumber(numbers) {
-    let maxNum = 0;
+    let maxNum = numbers[0];
     for (const number of numbers) {
-        if (number > maxNum){
-            maxNum = number;
-        }
+        if (number > maxNum){ maxNum = number; }
     }
     return maxNum;
 }
