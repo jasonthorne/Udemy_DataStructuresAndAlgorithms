@@ -1,5 +1,5 @@
-function reverseString(words) {
-    words = words.split(' ');
+function reverseString(str) {
+    /*words = words.split(' ');
     let reversedWords = '';
     
     for (let i = 0; i < words.length; i++) {
@@ -9,7 +9,15 @@ function reverseString(words) {
         }
         reversedWords += reversedWord + ' ';
     }
-    return reversedWords.trimEnd();
+    return reversedWords.trimEnd();*/
+    
+    let reversedStr = '';
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedStr += str[i];
+    }
+
+    return reversedStr;
 }
 
 module.exports = reverseString;
