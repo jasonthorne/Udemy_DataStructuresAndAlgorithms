@@ -1,7 +1,6 @@
 function findMissingNumber(numbers) {
 
     try{
-
         //if (numbers.length=0){return 1};
         numbers = numbers.sort(function(a, b){return a-b});  //https://www.w3schools.com/jsref/jsref_sort.asp
         let pointer = numbers[0];
