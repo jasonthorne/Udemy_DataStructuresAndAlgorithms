@@ -3,7 +3,7 @@ function arrayIntersection(array1, array2) {
         const matchedNums = new Set();
 
         new Set(array1).forEach((num)=>{
-            if(isNaN(num) || !num>0){throw 'positive numbers only'}
+            if(isNaN(num) || !num>0){throw 'positive numbers only'} //+++++++++FIX THIS :P
             else if(array2.includes(num)){
                 matchedNums.add(num);
             }
