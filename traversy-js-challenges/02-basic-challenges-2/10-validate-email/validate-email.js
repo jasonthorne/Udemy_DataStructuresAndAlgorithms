@@ -3,7 +3,7 @@ function validateEmail(email) {
     /*
     validateEmail('john@gmail.com'); // true
     validateEmail('john@gmail'); // false
-    */
+     */
 
     const domains = ['.com', '.org', '.ie'];
 
