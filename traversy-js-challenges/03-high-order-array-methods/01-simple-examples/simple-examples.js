@@ -52,10 +52,15 @@ console.log('found: ',found);
  * some: Checks if at least one array element satisfies a condition.
  */
 
- 
+ console.log(numbers.some(x=>x===2));
 
 /**
  * every: Checks if all array elements satisfy a condition.
  */
 
+const checkType = numbers.every((num)=> typeof num === 'number' /*num>0*/);
 
+//explanation on typeOf:
+//https://stackoverflow.com/questions/17440517/what-is-the-best-way-to-check-variable-type-in-javascript
+
+ console.log(checkType);
