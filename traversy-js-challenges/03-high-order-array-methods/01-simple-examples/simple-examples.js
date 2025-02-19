@@ -29,7 +29,9 @@ console.log(numbers3);
 
 const number4 = numbers.reduce((total, num) => {
    return total + num; //total is current running total, num is val at current pos
-});
+}, 0); //total starts at passed in 0
+
+
 console.log(number4);
 
 
@@ -37,12 +39,14 @@ console.log(number4);
  * forEach: Iterates through array elements and applies a function without creating a new array.
  */
 
-
+numbers.forEach(num => console.log('num is:', num));
 
  /**
  * find: Returns the first array element that satisfies a specified condition.
  */
 
+const found = numbers.find((x) => x%2===0);
+console.log('found: ',found);
 
 /**
  * some: Checks if at least one array element satisfies a condition.
