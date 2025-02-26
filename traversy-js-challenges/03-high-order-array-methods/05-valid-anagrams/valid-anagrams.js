@@ -85,7 +85,7 @@ function validAnagrams(str1, str2) {
 
     //const testArray = Array.from(new Set([...str1]));
     
-    const str1Frequencies = [];
+    /*const str1Frequencies = [];
 
     //testArray.forEach(char =>{
     Array.from(new Set([...str1])).forEach(char =>{
@@ -101,11 +101,28 @@ function validAnagrams(str1, str2) {
         return getFrequency([...str1], char);
     });
 
-    console.log(str1Frequencies2);
+    console.log(str1Frequencies2);*/
 
     //-------------------
-    console.log(getFrequencyArray(str1));
-    console.log(getFrequencyArray(str2));
+    //console.log(getFrequencyArray(str1));
+    //console.log(getFrequencyArray(str2));
+
+    
+    //const checkFrequencies = numbers.every((num)=> typeof num === 'number' /*num>0*/);
+    const str1Frequencies = getFrequencyArray(str1);
+    const str2Frequencies = getFrequencyArray(str2);
+
+    const checkFrequencies = str2Frequencies
+        .every((frequency, index) => {
+            console.log(str1Frequencies[index]);
+            console.log(frequency);
+            frequency === str1Frequencies[index]
+        });
+    
+    console.log(str1Frequencies);
+    console.log(str2Frequencies);
+    console.log(checkFrequencies);
+
 
     /*
 
