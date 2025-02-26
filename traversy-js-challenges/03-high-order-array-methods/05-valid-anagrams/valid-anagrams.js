@@ -3,24 +3,24 @@ function validAnagrams(str1, str2) {
     //count frequencies with reduce:
     //https://www.geeksforgeeks.org/count-frequency-of-an-array-item-in-javascript/
 
-    
-   /* const getFrequency = (arr, item) => {
-        return arr.reduce((count, x) => x === item ? count + 1 : count, 0);
-    };*/
-
-
-    const getFrequency = (arr, item) => {
-        return arr.reduce((count, x) => x === item ? count + 1 : count, 0);
-    };
-
-
     const getFrequencyArray = (str) => {
         let strArray = str.split('').sort();
 
-        const frequenciesArray = Array.from(new Set([...strArray])).map(char =>{
+        /*const frequenciesArray = Array.from(new Set([...strArray])).map(char =>{
             return strArray.reduce((count, x) => x === char ? count + 1 : count, 0);
         });
-        return frequenciesArray;
+         return frequenciesArray;
+        */
+
+        const frequency = {};
+        
+        new Set([...strArray]).forEach(char =>{
+            //return strArray.reduce((count, x) => x === char ? count + 1 : count, 0);
+            frequency[char] = strArray.reduce((count, x) => x === char ? count + 1 : count, 0);
+        });
+
+        console.log(frequency);
+       
     };
 
 
@@ -111,17 +111,18 @@ function validAnagrams(str1, str2) {
     //const checkFrequencies = numbers.every((num)=> typeof num === 'number' /*num>0*/);
     const str1Frequencies = getFrequencyArray(str1);
     const str2Frequencies = getFrequencyArray(str2);
-
-    const checkFrequencies = str2Frequencies
-        .every((frequency, index) => {
-            console.log(str1Frequencies[index]);
-            console.log(frequency);
-            frequency === str1Frequencies[index]
-        });
-    
     console.log(str1Frequencies);
     console.log(str2Frequencies);
-    console.log(checkFrequencies);
+
+    /*const checkFrequencies = str2Frequencies
+        .every((frequency, index) => {
+            console.log(str2Frequencies[index]);
+            console.log(frequency);
+            return (frequency === str2Frequencies[index])
+             && (frequency === str1Frequencies[index]);
+        });
+    
+    return checkFrequencies;*/
 
 
     /*
