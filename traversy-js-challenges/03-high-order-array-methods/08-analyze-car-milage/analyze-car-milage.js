@@ -36,14 +36,16 @@ let max = numbers.reduce((accumulator, currentValue) => {
 
 */
 
-const highestMileageCar = cars.reduce((currMaxMileage, currCar)=>{
+const highestMileageCar = cars.reduce((prevCar, currCar)=>{
     //return Math.max(currMileage, currCar.mileage); 
 
-    if(currCar.mileage > currMaxMileage){
-        currMaxMileage = currCar.mileage;
+    console.log(currCar.mileage)
+    console.log(prevCar.mileage)
+
+    /*if(currCar.mileage > prevCar.mileage){
         return currCar;
-    }else{return currMaxMileage}
-},0);
+    }*/
+},cars[0].mileage);
 
 console.log(highestMileageCar)
 //const lowestMileageCar =
