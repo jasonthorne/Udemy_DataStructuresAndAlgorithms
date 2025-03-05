@@ -15,8 +15,9 @@ function analyzeCarMileage(cars) {
 
     const totalMileage = cars.reduce((currTotal, currCar) => currTotal + currCar.mileage,0);
     const averageMileage = totalMileage/cars.length;
+    
     const highestMileageCar = cars.reduce((prevCar, currCar)=>{
-        //return the car withy the greatest milage:
+        //return the car with the greatest milage:
         if(currCar.mileage > prevCar.mileage){
             return currCar;
         }else{return prevCar}
@@ -24,7 +25,7 @@ function analyzeCarMileage(cars) {
     },cars[0]); //start prevCar as first cart in list
 
     const lowestMileageCar = cars.reduce((prevCar, currCar)=>{
-        //return the car withy the least milage:
+        //return the car with the least milage:
         if(currCar.mileage < prevCar.mileage){
             return currCar;
         }else{return prevCar}
