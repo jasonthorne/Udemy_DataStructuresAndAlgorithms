@@ -11,7 +11,7 @@ function findMissingLetter(letters) {
     const charCodes = letters.sort().map(letter => letter.charCodeAt(0));
     console.log(charCodes)
 
-    const test = charCodes.filter((charCode, index)=>{
+   // const test = charCodes.filter((charCode, index)=>{
         //if(letter === 'c') console.log(letters[index]);
         //return letter === 'c';
         //return letter.ch
@@ -24,15 +24,24 @@ function findMissingLetter(letters) {
 
        //console.log(testty.charCodeAt(0))
 
-       if((charCode+1) !== charCodes[(index+1)]){
-            //console.log(String.fromCharCode((array[index].charCodeAt(0)+1)));
-            console.log(String.fromCharCode([charCode+1]))
-            return String.fromCharCode([charCode+1])
-        }
+      // if((charCode+1) !== charCodes[(index+1)] && index !== (charCodes.length -1)){
+            //console.log(String.fromCharCode([charCode+1]))
+       //     return String.fromCharCode([charCode+1])
+       // }
         
-    });
+    //});
 
-   console.log(test)
+  // console.log(test)
+
+  return String.fromCharCode(charCodes
+    .reduce((charCode, index)=>{
+        if((charCode+1) !== charCodes[(index+1)] && index !== (charCodes.length -1)){
+            //console.log(String.fromCharCode([charCode+1]));
+            return charCode+1;
+        }
+    }));
+
+    //console.log(ugh)
 
     ///return test;
     
