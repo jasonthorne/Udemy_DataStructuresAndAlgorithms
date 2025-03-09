@@ -38,10 +38,10 @@ function findMissingLetter(letters) {
 
   return String.fromCharCode(charCodes
     .reduce((charCode, index)=>{
-        console.log('charCode: ', charCode)
-        console.log('index: ', index)
+        console.log('charCode: ', charCode);
+        console.log('index: ', index);
         console.log('character: ', String.fromCharCode(charCode+1))
-        console.log('charCode+1: ', charCode+1)
+        console.log('charCode+1: ', charCode+1);
         console.log('charCodes: ', charCodes[(index+1)]);
         //if((charCode+1) !== charCodes[(index+1)] && index !== (charCodes.length -1)){
         if((charCode+1) !== charCodes[(index+1)] && index !== (charCodes.length -1)){
