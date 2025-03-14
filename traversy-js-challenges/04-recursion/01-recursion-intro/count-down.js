@@ -2,14 +2,14 @@ function countDown(num) {
 
     //base case
     if(num <=0){
-        console.log("done, baby!");
+        console.log('All done!');
         return; //++++++++ REMEBER THIS :P
     }
 
     //recursive case
     if(num >0){
+        console.log(num);
         num--
-        console.log("num is now: ", num);
         countDown(num);
     }
 }
