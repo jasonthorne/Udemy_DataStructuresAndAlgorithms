@@ -4,7 +4,7 @@ function reverseString(str) {
         return str;
     }
 
-    //console.log(str.substring(1)+str.substring(0,1))
+    //console.log(str.substring(1)+str.substring(0,1));
 
     return reverseString(str.substring(1)) + str.substring(0,1);
 
