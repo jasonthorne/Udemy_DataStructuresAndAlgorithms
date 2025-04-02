@@ -5,7 +5,6 @@ function factorial(num) {
     }
 
     return num * factorial(num-1);
-
 }
 
 module.exports = factorial;
