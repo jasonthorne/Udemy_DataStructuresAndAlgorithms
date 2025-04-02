@@ -1,11 +1,12 @@
 function reverseString(str) {
     
-    if (!str || str.length === 0){
+    if (!str || str.length === 0){ //when streing is empty, i'e all chars reversed.
         return str;
     }
 
     //console.log(str.substring(1)+str.substring(0,1));
 
+    //2nd char to end of string + first char, to 2nd char:
     return reverseString(str.substring(1)) + str.substring(0,1);
 
     
