@@ -1,4 +1,4 @@
-function arraySum(array) {
+function arraySum(arr) {
 
     /*
     Think about what your base case might be with an array
@@ -11,8 +11,12 @@ function arraySum(array) {
     */
 
     //base case:
-    
+    if(arr.length === 0){
+        return 0;
+    }
 
+    //recursive case:
+    return arr[0] + arraySum(arr.slice(1));
 
 }
 
